@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import MemoryGame from './MemoryGame'
 import BrickBust from './BrickBust'
-import { assertTSAnyKeyword } from '@babel/types'
+import SkyKingdom from '../assets/SkyKingdom.jpeg'
 
 const Island = () => {
 
@@ -11,7 +11,10 @@ const Island = () => {
         <IslandContainer>
             <div>
                 <MemoryGame/>
-                <BrickBust/>
+                <BrickBustButton>
+                    <BrickBust/>
+                </BrickBustButton>
+                
             </div>
         </IslandContainer>
     )
@@ -20,13 +23,16 @@ const Island = () => {
 
 export default Island;
 
-const IslandContainer = styled.section`
-    
-    background-image: url("https://i.redd.it/ksrpnggg59f61.jpg")
+const IslandContainer = styled.div`
+    background-image: ${SkyKingdom};
+    width: 2000px;
+    height: 2000px;
 
 `
 
 const BrickBustButton = styled.button`
 
+    color: tomato;
+    border-color: tomato;
 
 `
